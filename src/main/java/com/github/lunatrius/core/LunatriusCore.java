@@ -3,7 +3,6 @@ package com.github.lunatrius.core;
 import com.github.lunatrius.core.handler.ConfigurationHandler;
 import com.github.lunatrius.core.proxy.CommonProxy;
 import com.github.lunatrius.core.reference.Reference;
-import com.github.lunatrius.core.version.VersionChecker;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
@@ -29,16 +28,10 @@ public class LunatriusCore {
     public void preInit(FMLPreInitializationEvent event) {
         Reference.logger = event.getModLog();
         ConfigurationHandler.init(event.getSuggestedConfigurationFile());
-
-        VersionChecker.registerMod(event.getModMetadata(), Reference.FORGE);
     }
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
-        if (ConfigurationHandler.checkForUpdates) {
-            VersionChecker.startVersionCheck();
-        }
-
         proxy.registerTickers();
     }
 
