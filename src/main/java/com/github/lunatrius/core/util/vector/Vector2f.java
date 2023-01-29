@@ -1,6 +1,7 @@
 package com.github.lunatrius.core.util.vector;
 
 public class Vector2f {
+
     public static final float FLOAT_EPSILON = 10e-6f;
     public float x;
     public float y;

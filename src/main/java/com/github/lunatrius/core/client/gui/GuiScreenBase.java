@@ -1,14 +1,16 @@
 package com.github.lunatrius.core.client.gui;
 
-import net.minecraft.client.gui.GuiButton;
-import net.minecraft.client.gui.GuiScreen;
-import net.minecraft.client.gui.GuiTextField;
-import org.lwjgl.input.Keyboard;
-
 import java.util.ArrayList;
 import java.util.List;
 
+import net.minecraft.client.gui.GuiButton;
+import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.client.gui.GuiTextField;
+
+import org.lwjgl.input.Keyboard;
+
 public class GuiScreenBase extends GuiScreen {
+
     protected final GuiScreen parentScreen;
 
     protected List<GuiButton> buttonList = super.buttonList; // I feel dirty

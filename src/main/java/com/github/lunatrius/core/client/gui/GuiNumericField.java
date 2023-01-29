@@ -6,6 +6,7 @@ import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.GuiTextField;
 
 public class GuiNumericField extends GuiButton {
+
     private static final int DEFAULT_VALUE = 0;
     private static final int BUTTON_WIDTH = 12;
 

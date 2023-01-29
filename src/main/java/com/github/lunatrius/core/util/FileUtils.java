@@ -1,11 +1,12 @@
 package com.github.lunatrius.core.util;
 
-import com.github.lunatrius.core.reference.Reference;
-
 import java.io.File;
 import java.io.IOException;
 
+import com.github.lunatrius.core.reference.Reference;
+
 public class FileUtils {
+
     // http://stackoverflow.com/a/3758880/1166946
     public static String humanReadableByteCount(final long bytes) {
         final int unit = 1024;

@@ -1,6 +1,7 @@
 package com.github.lunatrius.core.util.vector;
 
 public class Vector4f extends Vector3f {
+
     public float w;
 
     public Vector4f() {
@@ -108,11 +109,19 @@ public class Vector4f extends Vector3f {
     }
 
     public Vector4i toVector4i() {
-        return new Vector4i((int) Math.floor(this.x), (int) Math.floor(this.y), (int) Math.floor(this.z), (int) Math.floor(this.w));
+        return new Vector4i(
+                (int) Math.floor(this.x),
+                (int) Math.floor(this.y),
+                (int) Math.floor(this.z),
+                (int) Math.floor(this.w));
     }
 
     public Vector4i toVector4i(Vector4i vec) {
-        return vec.set((int) Math.floor(this.x), (int) Math.floor(this.y), (int) Math.floor(this.z), (int) Math.floor(this.w));
+        return vec.set(
+                (int) Math.floor(this.x),
+                (int) Math.floor(this.y),
+                (int) Math.floor(this.z),
+                (int) Math.floor(this.w));
     }
 
     public Vector4d toVector4d() {
@@ -138,7 +147,9 @@ public class Vector4f extends Vector3f {
     }
 
     public boolean equals(Vector4f vec, float epsilon) {
-        return Math.abs(this.x - vec.x) < epsilon && Math.abs(this.y - vec.y) < epsilon && Math.abs(this.z - vec.z) < epsilon && Math.abs(this.w - vec.w) < epsilon;
+        return Math.abs(this.x - vec.x) < epsilon && Math.abs(this.y - vec.y) < epsilon
+                && Math.abs(this.z - vec.z) < epsilon
+                && Math.abs(this.w - vec.w) < epsilon;
     }
 
     @Override

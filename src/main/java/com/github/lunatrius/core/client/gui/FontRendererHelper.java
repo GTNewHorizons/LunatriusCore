@@ -3,6 +3,7 @@ package com.github.lunatrius.core.client.gui;
 import net.minecraft.client.gui.FontRenderer;
 
 public class FontRendererHelper {
+
     public static void drawLeftAlignedString(FontRenderer fontRenderer, String str, int x, int y, int color) {
         fontRenderer.drawStringWithShadow(str, x, y, color);
     }
