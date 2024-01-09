@@ -22,12 +22,17 @@ public class DelayedGuiDisplayTicker {
         this.ticks--;
 
         if (this.ticks < 0) {
-            Minecraft.getMinecraft().displayGuiScreen(this.guiScreen);
-            FMLCommonHandler.instance().bus().unregister(this);
+            Minecraft.getMinecraft()
+                .displayGuiScreen(this.guiScreen);
+            FMLCommonHandler.instance()
+                .bus()
+                .unregister(this);
         }
     }
 
     public static void create(GuiScreen guiScreen, int delay) {
-        FMLCommonHandler.instance().bus().register(new DelayedGuiDisplayTicker(guiScreen, delay));
+        FMLCommonHandler.instance()
+            .bus()
+            .register(new DelayedGuiDisplayTicker(guiScreen, delay));
     }
 }

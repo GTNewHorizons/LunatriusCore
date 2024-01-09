@@ -38,7 +38,8 @@ public class GuiHandler {
                 final Iterator<ModContainer> iterator = mods.iterator();
                 while (iterator.hasNext()) {
                     final ModContainer mod = iterator.next();
-                    final IModGuiFactory guiFactory = FMLClientHandler.instance().getGuiFactoryFor(mod);
+                    final IModGuiFactory guiFactory = FMLClientHandler.instance()
+                        .getGuiFactoryFor(mod);
                     if (guiFactory == null || guiFactory.mainConfigGuiClass() == null) {
                         iterator.remove();
                     }

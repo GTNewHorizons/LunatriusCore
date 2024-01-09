@@ -27,7 +27,8 @@ public class FileUtils {
     // http://stackoverflow.com/q/18227634/1166946
     public static boolean contains(final File root, final File file) {
         try {
-            return file.getCanonicalPath().startsWith(root.getCanonicalPath() + File.separator);
+            return file.getCanonicalPath()
+                .startsWith(root.getCanonicalPath() + File.separator);
         } catch (IOException e) {
             Reference.logger.error("", e);
         }
