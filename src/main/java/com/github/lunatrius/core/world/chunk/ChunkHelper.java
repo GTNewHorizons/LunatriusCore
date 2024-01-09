@@ -3,6 +3,7 @@ package com.github.lunatrius.core.world.chunk;
 import java.util.Random;
 
 public class ChunkHelper {
+
     private static final Random RANDOM = new Random();
 
     public static boolean isSlimeChunk(long seed, int x, int z) {

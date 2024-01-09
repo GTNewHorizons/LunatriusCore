@@ -1,12 +1,14 @@
 package com.github.lunatrius.core.handler;
 
-import cpw.mods.fml.common.FMLCommonHandler;
-import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.gameevent.TickEvent;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiScreen;
 
+import cpw.mods.fml.common.FMLCommonHandler;
+import cpw.mods.fml.common.eventhandler.SubscribeEvent;
+import cpw.mods.fml.common.gameevent.TickEvent;
+
 public class DelayedGuiDisplayTicker {
+
     private final GuiScreen guiScreen;
     private int ticks;
 
@@ -20,12 +22,17 @@ public class DelayedGuiDisplayTicker {
         this.ticks--;
 
         if (this.ticks < 0) {
-            Minecraft.getMinecraft().displayGuiScreen(this.guiScreen);
-            FMLCommonHandler.instance().bus().unregister(this);
+            Minecraft.getMinecraft()
+                .displayGuiScreen(this.guiScreen);
+            FMLCommonHandler.instance()
+                .bus()
+                .unregister(this);
         }
     }
 
     public static void create(GuiScreen guiScreen, int delay) {
-        FMLCommonHandler.instance().bus().register(new DelayedGuiDisplayTicker(guiScreen, delay));
+        FMLCommonHandler.instance()
+            .bus()
+            .register(new DelayedGuiDisplayTicker(guiScreen, delay));
     }
 }

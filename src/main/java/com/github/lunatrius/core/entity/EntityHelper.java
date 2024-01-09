@@ -1,13 +1,15 @@
 package com.github.lunatrius.core.entity;
 
-import com.github.lunatrius.core.util.vector.Vector3f;
-import com.github.lunatrius.core.util.vector.Vector3i;
 import net.minecraft.entity.Entity;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
+import com.github.lunatrius.core.util.vector.Vector3f;
+import com.github.lunatrius.core.util.vector.Vector3i;
+
 public class EntityHelper {
+
     public final static int WILDMARK = -1;
 
     public static int getItemCountInInventory(IInventory inventory, Item item) {
@@ -21,7 +23,8 @@ public class EntityHelper {
         for (int slot = 0; slot < inventorySize; slot++) {
             final ItemStack itemStack = inventory.getStackInSlot(slot);
 
-            if (itemStack != null && itemStack.getItem() == item && (itemDamage == WILDMARK || itemDamage == itemStack.getItemDamage())) {
+            if (itemStack != null && itemStack.getItem() == item
+                && (itemDamage == WILDMARK || itemDamage == itemStack.getItemDamage())) {
                 count += itemStack.stackSize;
             }
         }
@@ -38,7 +41,10 @@ public class EntityHelper {
     }
 
     public static Vector3i getVector3iFromEntity(Entity entity) {
-        return new Vector3i((int) Math.floor(entity.posX), (int) Math.floor(entity.posY), (int) Math.floor(entity.posZ));
+        return new Vector3i(
+            (int) Math.floor(entity.posX),
+            (int) Math.floor(entity.posY),
+            (int) Math.floor(entity.posZ));
     }
 
     public static Vector3i getVector3iFromEntity(Entity entity, Vector3i vec) {

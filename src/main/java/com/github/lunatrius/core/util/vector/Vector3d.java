@@ -1,6 +1,7 @@
 package com.github.lunatrius.core.util.vector;
 
 public class Vector3d extends Vector2d {
+
     public double z;
 
     public Vector3d() {
@@ -131,7 +132,8 @@ public class Vector3d extends Vector2d {
     }
 
     public boolean equals(Vector3d vec, double epsilon) {
-        return Math.abs(this.x - vec.x) < epsilon && Math.abs(this.y - vec.y) < epsilon && Math.abs(this.z - vec.z) < epsilon;
+        return Math.abs(this.x - vec.x) < epsilon && Math.abs(this.y - vec.y) < epsilon
+            && Math.abs(this.z - vec.z) < epsilon;
     }
 
     @Override

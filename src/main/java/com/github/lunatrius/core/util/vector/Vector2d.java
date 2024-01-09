@@ -1,6 +1,7 @@
 package com.github.lunatrius.core.util.vector;
 
 public class Vector2d {
+
     public static final double DOUBLE_EPSILON = 10e-6f;
     public double x;
     public double y;
