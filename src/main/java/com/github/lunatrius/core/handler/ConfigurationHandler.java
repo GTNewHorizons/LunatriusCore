@@ -41,35 +41,35 @@ public class ConfigurationHandler {
 
     private static void loadConfiguration() {
         propCheckForUpdates = configuration.get(
-                Names.Config.Category.VERSION_CHECK,
-                Names.Config.CHECK_FOR_UPDATES,
-                CHECK_FOR_UPDATES_DEFAULT,
-                Names.Config.CHECK_FOR_UPDATES_DESC);
+            Names.Config.Category.VERSION_CHECK,
+            Names.Config.CHECK_FOR_UPDATES,
+            CHECK_FOR_UPDATES_DEFAULT,
+            Names.Config.CHECK_FOR_UPDATES_DESC);
         propCheckForUpdates.setLanguageKey(Names.Config.LANG_PREFIX + "." + Names.Config.CHECK_FOR_UPDATES);
         propCheckForUpdates.setRequiresMcRestart(true);
         checkForUpdates = propCheckForUpdates.getBoolean(CHECK_FOR_UPDATES_DEFAULT);
 
         propSilenceKnownUpdates = configuration.get(
-                Names.Config.Category.VERSION_CHECK,
-                Names.Config.SILENCE_KNOWN_UPDATES,
-                SILENCE_KNOWN_UPDATES_DEFAULT,
-                Names.Config.SILENCE_KNOWN_UPDATES_DESC);
+            Names.Config.Category.VERSION_CHECK,
+            Names.Config.SILENCE_KNOWN_UPDATES,
+            SILENCE_KNOWN_UPDATES_DEFAULT,
+            Names.Config.SILENCE_KNOWN_UPDATES_DESC);
         propSilenceKnownUpdates.setLanguageKey(Names.Config.LANG_PREFIX + "." + Names.Config.SILENCE_KNOWN_UPDATES);
         propSilenceKnownUpdates.setRequiresMcRestart(true);
         silenceKnownUpdates = propSilenceKnownUpdates.getBoolean(SILENCE_KNOWN_UPDATES_DEFAULT);
 
         propKnownUpdates = configuration.get(
-                Names.Config.Category.VERSION_CHECK,
-                Names.Config.KNOWN_VERSIONS,
-                new String[0],
-                Names.Config.KNOWN_VERSIONS_DESC);
+            Names.Config.Category.VERSION_CHECK,
+            Names.Config.KNOWN_VERSIONS,
+            new String[0],
+            Names.Config.KNOWN_VERSIONS_DESC);
         propKnownUpdates.setShowInGui(false);
 
         propReplaceInGameConfig = configuration.get(
-                Names.Config.Category.TWEAKS,
-                Names.Config.REPLACE_IN_GAME_CONFIG,
-                REPLACE_IN_GAME_CONFIG_DEFAULT,
-                Names.Config.REPLACE_IN_GAME_CONFIG_DESC);
+            Names.Config.Category.TWEAKS,
+            Names.Config.REPLACE_IN_GAME_CONFIG,
+            REPLACE_IN_GAME_CONFIG_DEFAULT,
+            Names.Config.REPLACE_IN_GAME_CONFIG_DESC);
         propReplaceInGameConfig.setLanguageKey(Names.Config.LANG_PREFIX + "." + Names.Config.REPLACE_IN_GAME_CONFIG);
         replaceInGameConfig = propReplaceInGameConfig.getBoolean(REPLACE_IN_GAME_CONFIG_DEFAULT);
 
@@ -96,8 +96,8 @@ public class ConfigurationHandler {
     }
 
     public static boolean canNotifyOfUpdate(String modid, String version) {
-        return !Arrays.asList(propKnownUpdates.getStringList()).contains(String.format("%s %s", modid, version))
-                || !silenceKnownUpdates;
+        return !Arrays.asList(propKnownUpdates.getStringList())
+            .contains(String.format("%s %s", modid, version)) || !silenceKnownUpdates;
     }
 
     @SubscribeEvent
