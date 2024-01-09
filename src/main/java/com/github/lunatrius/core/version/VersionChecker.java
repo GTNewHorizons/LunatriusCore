@@ -47,7 +47,6 @@ public class VersionChecker {
     public static void startVersionCheck() {}
 
     private static void addOutdatedMod(ModMetadata metadata, ArtifactVersion versionLocal,
-        DefaultArtifactVersion versionRemote, String changeLog) {
-
+            DefaultArtifactVersion versionRemote, String changeLog) {
     }
 }

@@ -24,7 +24,7 @@ public class EntityHelper {
             final ItemStack itemStack = inventory.getStackInSlot(slot);
 
             if (itemStack != null && itemStack.getItem() == item
-                && (itemDamage == WILDMARK || itemDamage == itemStack.getItemDamage())) {
+                    && (itemDamage == WILDMARK || itemDamage == itemStack.getItemDamage())) {
                 count += itemStack.stackSize;
             }
         }
@@ -42,9 +42,9 @@ public class EntityHelper {
 
     public static Vector3i getVector3iFromEntity(Entity entity) {
         return new Vector3i(
-            (int) Math.floor(entity.posX),
-            (int) Math.floor(entity.posY),
-            (int) Math.floor(entity.posZ));
+                (int) Math.floor(entity.posX),
+                (int) Math.floor(entity.posY),
+                (int) Math.floor(entity.posZ));
     }
 
     public static Vector3i getVector3iFromEntity(Entity entity, Vector3i vec) {

@@ -110,34 +110,62 @@ public class Vector4d extends Vector3d {
 
     public Vector4i toVector4i() {
         return new Vector4i(
+<<<<<<< HEAD
             (int) Math.floor(this.x),
             (int) Math.floor(this.y),
             (int) Math.floor(this.z),
             (int) Math.floor(this.w));
+=======
+                (int) Math.floor(this.x),
+                (int) Math.floor(this.y),
+                (int) Math.floor(this.z),
+                (int) Math.floor(this.w));
+>>>>>>> master
     }
 
     public Vector4i toVector4i(Vector4i vec) {
         return vec.set(
+<<<<<<< HEAD
             (int) Math.floor(this.x),
             (int) Math.floor(this.y),
             (int) Math.floor(this.z),
             (int) Math.floor(this.w));
+=======
+                (int) Math.floor(this.x),
+                (int) Math.floor(this.y),
+                (int) Math.floor(this.z),
+                (int) Math.floor(this.w));
+>>>>>>> master
     }
 
     public Vector4f toVector4f() {
         return new Vector4f(
+<<<<<<< HEAD
             (float) Math.floor(this.x),
             (float) Math.floor(this.y),
             (float) Math.floor(this.z),
             (float) Math.floor(this.w));
+=======
+                (float) Math.floor(this.x),
+                (float) Math.floor(this.y),
+                (float) Math.floor(this.z),
+                (float) Math.floor(this.w));
+>>>>>>> master
     }
 
     public Vector4f toVector4f(Vector4f vec) {
         return vec.set(
+<<<<<<< HEAD
             (float) Math.floor(this.x),
             (float) Math.floor(this.y),
             (float) Math.floor(this.z),
             (float) Math.floor(this.w));
+=======
+                (float) Math.floor(this.x),
+                (float) Math.floor(this.y),
+                (float) Math.floor(this.z),
+                (float) Math.floor(this.w));
+>>>>>>> master
     }
 
     @Override
@@ -156,8 +184,8 @@ public class Vector4d extends Vector3d {
 
     public boolean equals(Vector4d vec, double epsilon) {
         return Math.abs(this.x - vec.x) < epsilon && Math.abs(this.y - vec.y) < epsilon
-            && Math.abs(this.z - vec.z) < epsilon
-            && Math.abs(this.w - vec.w) < epsilon;
+                && Math.abs(this.z - vec.z) < epsilon
+                && Math.abs(this.w - vec.w) < epsilon;
     }
 
     @Override
